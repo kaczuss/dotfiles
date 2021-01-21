@@ -1,0 +1,26 @@
+alias gitb='git branch'
+alias gitc='git branch | grep -v "master" | xargs git branch -D'
+alias gitm='git checkout master'
+
+alias gitlll='git log -u'
+alias gitll='git log'
+alias gitl='git log --graph --decorate --pretty=oneline --abbrev-commit'
+
+alias gs='git status'
+
+alias gitrestart='git r && gitm && gitpu && gitc'
+
+alias gitwho='git shortlog -n -s --no-merges'
+
+ghclone() {
+    if [ "x$1" != "x" ]
+        then
+            url=$1
+            repository="${url##*/}"
+            user=$(echo "$url" | cut -d / -f 4)
+            git clone "https://github.com/$user/$repository.git"
+        else
+            echo "usage: ghclone [GitHub repository URL]\nghclone: error: too few arguments"
+    fi
+
+}
