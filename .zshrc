@@ -36,3 +36,8 @@ source $HOME/.miscrc
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 unsetopt share_history
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+alias python=/usr/local/bin/python3
