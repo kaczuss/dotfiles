@@ -28,10 +28,7 @@ bindkey "\e[B" history-search-forward
 source $ZSH/oh-my-zsh.sh
 source $HOME/.sdkman/bin/sdkman-init.sh
 
-source $HOME/.awsrc
-source $HOME/.dockerrc
 source $HOME/.gitrc
-source $HOME/.miscrc
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
